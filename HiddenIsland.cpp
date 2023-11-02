@@ -16,30 +16,6 @@ void init(){
 	}
 }
 
-void pr(int n){
-	cout << "island : \n";
-	for(int i = 0; i < 5; i++){
-		for(int j = 0; j < 5; j++)
-			cout << ar[i][j] << "  ";
-		cout << "\n";
-	}
-	cout << "\nparent : \n";
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n; j++){
-			cout << p[i*1005 + j] << "  ";
-		}
-		cout << "\n";
-	}
-	cout << "\nrank : \n";
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < n; j++){
-			cout << rk[i*1005 + j] << "  ";
-		}
-		cout << "\n";
-	}
-	cout << "\n";
-}
-
 int find(int x){
 	return x == p[x] ? x : (p[x] = find(p[x]));
 }
@@ -83,7 +59,6 @@ int main(void){
 				}
 			}
 		}
-		//pr(5);
 		cout << islands << "\n";
 	}
 	return 0;
