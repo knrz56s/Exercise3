@@ -74,8 +74,8 @@ int main(void){
 			for(int i = 0; i < 4; i++){
 				int nx = x + ofs[0][i];
 				int ny = y + ofs[1][i];
-				if(nx < 0 || nx >= 1000) continue;
-				if(ny < 0 || ny >= 1000) continue;
+				if(nx < 0 || nx > 999) continue;
+				if(ny < 0 || ny > 999) continue;
 				if(ar[nx][ny] == 1){
 					//cout<< nx  << " nx = ny " << ny << "\n";
 					islands--;
