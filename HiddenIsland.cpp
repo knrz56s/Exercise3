@@ -76,11 +76,10 @@ int main(void){
 				int ny = y + ofs[1][i];
 				if(nx < 0 || nx >= 1000) continue;
 				if(ny < 0 || ny >= 1000) continue;
-				int nv = nx * 1005 + ny;
 				if(ar[nx][ny] == 1){
 					//cout<< nx  << " nx = ny " << ny << "\n";
 					islands--;
-					if(uni(x * 1005 + y, nv)) islands++;
+					if(uni(x * 1005 + y, nx * 1005 + ny)) islands++;
 				}
 			}
 		}
