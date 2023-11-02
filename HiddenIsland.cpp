@@ -4,14 +4,14 @@
 using namespace std;
 
 bool ar[1005][1005];
-int p[1000010];
-int rk[1000010];
+int p[1006010];//1005 * 1000 = 1005000
+int rk[1006010];//1005000 + 1000 = 1006000
 int ofs[2][4] = {{-1, 0, 1, 0},
 						{0, 1, 0, -1}};
 
 void init(){
 	memset(ar, false, sizeof(ar));
-	for(int i = 0; i < 1000010; i++){
+	for(int i = 0; i < 1006010; i++){
 		p[i] = i; rk[i] = 1;
 	}
 }
